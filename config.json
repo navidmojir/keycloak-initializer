@@ -1,0 +1,63 @@
+{
+	"realmName": "cbi",
+	"authServerUrl": "http://localhost:8080",
+	"tmpAdminUsername": "tmpadmin",
+	"tmpAdminPassword": "tmpadmin",
+	"clients": [
+		{
+			"clientId": "data-item-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "person-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "inquiry-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "document-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "inquiry-panel",
+			"publicClient": true,
+			"serviceAccountsEnabled": false,
+			"directAccessGrantsEnabled": false,
+			"standardFlowEnabled": true,
+			"authorizationServicesEnabled": false,
+			"rootUrl": "http://localhost:4200",
+			"redirectUris": ["/*"],
+			"webOrigins": ["+"]
+		}
+	]
+}
