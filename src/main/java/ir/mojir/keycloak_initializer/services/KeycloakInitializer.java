@@ -79,6 +79,7 @@ public class KeycloakInitializer {
 	        KcGetClientResp client = keycloakClient.getClient(clientConf.getClientId(), adminAccessToken);
 	        String clientSecret = keycloakClient.fetchClientSecret(client.getId(), adminAccessToken);
 	        ClientCreationResult clientCreationResult = new ClientCreationResult();
+	        clientCreationResult.setClientId(clientConf.getClientId());
 	        clientCreationResult.setClientUuid(client.getId());
 	        clientCreationResult.setClientSecret(clientSecret);
 	        result.getCreatedClients().add(clientCreationResult);

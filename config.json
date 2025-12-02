@@ -1,8 +1,8 @@
 {
 	"realmName": "cbi",
-	"authServerUrl": "http://localhost:8080",
-	"tmpAdminUsername": "tmpadmin",
-	"tmpAdminPassword": "tmpadmin",
+	"authServerUrl": "http://localhost:4044/auth",
+	"tmpAdminUsername": "admin",
+	"tmpAdminPassword": "admin",
 	"clients": [
 		{
 			"clientId": "data-item-manager",
@@ -55,7 +55,7 @@
 			"directAccessGrantsEnabled": false,
 			"standardFlowEnabled": true,
 			"authorizationServicesEnabled": false,
-			"rootUrl": "http://localhost:4200",
+			"rootUrl": "http://localhost:8096",
 			"redirectUris": ["/*"],
 			"webOrigins": ["+"]
 		}

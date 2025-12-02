@@ -6,8 +6,16 @@ import java.util.List;
 public class InitializationResult {
 
 	public static class ClientCreationResult {
+		private String clientId;
 		private String clientUuid;
 		private String clientSecret;
+		
+		public String getClientId() {
+			return clientId;
+		}
+		public void setClientId(String clientId) {
+			this.clientId = clientId;
+		}
 		public String getClientUuid() {
 			return clientUuid;
 		}
