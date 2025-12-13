@@ -14,6 +14,11 @@ public class Configuration {
 		private String rootUrl;
 		private String[] redirectUris;
 		private String [] webOrigins;
+
+		private String[] serviceAccountRoles;
+
+		private String[] clientRoles;
+
 		public String getClientId() {
 			return clientId;
 		}
@@ -68,10 +73,75 @@ public class Configuration {
 		public void setWebOrigins(String[] webOrigins) {
 			this.webOrigins = webOrigins;
 		}
-		
-		
+
+		public String[] getServiceAccountRoles() {
+			return serviceAccountRoles;
+		}
+
+		public void setServiceAccountRoles(String[] serviceAccountRoles) {
+			this.serviceAccountRoles = serviceAccountRoles;
+		}
+
+		public String[] getClientRoles() {
+			return clientRoles;
+		}
+
+		public void setClientRoles(String[] clientRoles) {
+			this.clientRoles = clientRoles;
+		}
 	}
-	
+
+	public static class UserConfig {
+
+		public static class ClientRole {
+			private String roleName;
+			private String clientId;
+
+			public String getRoleName() {
+				return roleName;
+			}
+
+			public void setRoleName(String roleName) {
+				this.roleName = roleName;
+			}
+
+			public String getClientId() {
+				return clientId;
+			}
+
+			public void setClientId(String clientId) {
+				this.clientId = clientId;
+			}
+		}
+		private String username;
+		private String password;
+
+		private ClientRole[] clientRoles;
+
+		public String getUsername() {
+			return username;
+		}
+
+		public void setUsername(String username) {
+			this.username = username;
+		}
+
+		public String getPassword() {
+			return password;
+		}
+
+		public void setPassword(String password) {
+			this.password = password;
+		}
+
+		public ClientRole[] getClientRoles() {
+			return clientRoles;
+		}
+
+		public void setClientRoles(ClientRole[] clientRoles) {
+			this.clientRoles = clientRoles;
+		}
+	}
 	private String realmName;
 	
 	private String authServerUrl;
@@ -79,8 +149,14 @@ public class Configuration {
 	private String tmpAdminUsername;
 	    
 	private String tmpAdminPassword;
+
+	private String masterAdminUsername;
+
+	private String masterAdminPassword;
 	
 	private List<ClientConfig> clients;
+
+	private List<UserConfig> users;
 
 
 	public String getRealmName() {
@@ -131,8 +207,28 @@ public class Configuration {
 	public void setClients(List<ClientConfig> clients) {
 		this.clients = clients;
 	}
-	
-	
-	
-	
+
+	public List<UserConfig> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<UserConfig> users) {
+		this.users = users;
+	}
+
+	public String getMasterAdminUsername() {
+		return masterAdminUsername;
+	}
+
+	public void setMasterAdminUsername(String masterAdminUsername) {
+		this.masterAdminUsername = masterAdminUsername;
+	}
+
+	public String getMasterAdminPassword() {
+		return masterAdminPassword;
+	}
+
+	public void setMasterAdminPassword(String masterAdminPassword) {
+		this.masterAdminPassword = masterAdminPassword;
+	}
 }
