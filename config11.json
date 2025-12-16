@@ -1,0 +1,63 @@
+{
+	"realmName": "cbi",
+	"authServerUrl": "http://localhost:4043/auth",
+	"tmpAdminUsername": "admin",
+	"tmpAdminPassword": "admin",
+	"clients": [
+		{
+			"clientId": "data-item-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "person-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "inquiry-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "document-manager",
+			"publicClient": false,
+			"serviceAccountsEnabled": true,
+			"directAccessGrantsEnabled": true,
+			"standardFlowEnabled": false,
+			"authorizationServicesEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": []
+		},
+		{
+			"clientId": "inquiry-panel",
+			"publicClient": true,
+			"serviceAccountsEnabled": false,
+			"directAccessGrantsEnabled": false,
+			"standardFlowEnabled": true,
+			"authorizationServicesEnabled": false,
+			"rootUrl": "http://estelam.local",
+			"redirectUris": ["/*"],
+			"webOrigins": ["+"]
+		}
+	]
+}
