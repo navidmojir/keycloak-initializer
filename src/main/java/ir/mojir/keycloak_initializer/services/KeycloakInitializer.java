@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Optional;
 
 import ir.mojir.keycloak_initializer.config.Parameters;
+import ir.mojir.keycloak_initializer.helpers.ConfigLoader;
 import ir.mojir.my_kc_auth_client.dtos.*;
 import ir.mojir.spring_boot_commons.exceptions.InternalErrorException;
 import org.slf4j.Logger;
@@ -51,7 +52,7 @@ public class KeycloakInitializer {
 		createRealm();
 		createClients();
 		createUsers();
-		createMasterAdminUser();
+//		createMasterAdminUser();
 		saveResult();
 	}
 
@@ -190,7 +191,8 @@ public class KeycloakInitializer {
 
 	private void loadConfiguration() {
 		try {
-			config = new ObjectMapper().readValue(new File(params.getConfigurationFilePath()), Configuration.class);
+//			config = new ObjectMapper().readValue(new File(params.getConfigurationFilePath()), Configuration.class);
+			config = ConfigLoader.load(params.getConfigurationFilePath());
 			kcConfig.setKcRealm(config.getRealmName());
 			kcConfig.setAuthServerUrl(config.getAuthServerUrl());
 		} catch(Exception e) {
