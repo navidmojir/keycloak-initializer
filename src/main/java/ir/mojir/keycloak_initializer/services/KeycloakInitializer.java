@@ -129,7 +129,7 @@ public class KeycloakInitializer {
 		Optional<InitializationResult.ClientCreationResult> clientInfo =
 				result.getCreatedClients().stream().filter(item -> item.getClientId().equals(clientId)).findFirst();
 		if(clientInfo.isEmpty())
-			throw new InternalErrorException("Faile to find client id " + clientId + " from created clients list", null);
+			throw new InternalErrorException("Failed to find client id " + clientId + " from created clients list", null);
 		return clientInfo.get().getClientUuid();
 	}
 
